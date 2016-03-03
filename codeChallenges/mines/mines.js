@@ -1,6 +1,6 @@
 console.log('fs.js: Mini test app for argv, server, oppressor, file read\n');
 
-var fs = require('fs');
+var fs   = require('fs');
 var sscanf = require('scanf').sscanf;
 var utilArray = require('./utilArray.js');
 
@@ -12,6 +12,15 @@ if (typeof process.argv[2] == 'undefined') {
 } else {
   fileRawMap = process.argv[2];
 }
+
+fs.stat(fileRawMap, (err, stat) => {
+  if (null == err)
+    console.log('Data file '+fileRawMap+' found.');
+  else {
+    console.log('Data file '+fileRawMap+' not found. Using file "m4" instead.');
+    fileRawMap = 'm4';
+  }
+});
 
 /*-------
   Server
