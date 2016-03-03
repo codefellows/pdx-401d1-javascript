@@ -1,4 +1,6 @@
-A solution to this code challenge:
+A solution to this code challenge. Usage:
+
+  `$ node fruit.js`
 
 Little Jenny has been sent to the market with a 5 dollar bill in hand, to buy fruits for a gift basket for the new neighbors. Since she's a diligent and literal-minded kid, she intends to spend exactly 5 dollars - not one cent more or less.
 The fact that the market sells fruits per piece at non-round prices, does not make this easy - but Jenny is prepared. She takes out a Netbook from her backpack, types in the unit prices of some of the fruits she sees, and fires off a program from her collection - and voil\u00e0, the possible fruit combinations for a $5 purchase appear on the screen.
