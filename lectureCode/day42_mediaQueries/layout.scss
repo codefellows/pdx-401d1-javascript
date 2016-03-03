@@ -1,0 +1,83 @@
+/*
+// This code uses plain CSS media queries
+@media only screen and (min-width:  320px) {
+  * { font-size: "32px";
+      color: red;
+    }
+}
+
+@media only screen and (min-width:  800px) {
+  * { font-size: 1em;
+      color: blue;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+  * { font-size: 1em;
+      color: green;
+      font-family: courier, fixed
+    }
+}
+*/
+
+$breaks: (
+  thin:  320px,
+  med:   800px,
+  wide: 1280px
+);
+
+/*
+
+// This code uses a SASS map (i.e., $breaks, which acts like a "hash")
+
+@media (min-width: #{map-get($breaks, thin)}) {
+  * { font-size: "32px";
+      color: #ff00ff;
+    }
+}
+@media (min-width: #{map-get($breaks, med )}) {
+  * { font-size: 1em;
+      color: pink;
+    }
+}
+@media (min-width: #{map-get($breaks, wide)}) {
+  * { font-size: 1em;
+      color: green;
+      font-family: courier, fixed
+    }
+}
+*/
+
+// This code uses $breaks and a SASS mixin
+
+@mixin mquery($b) {
+  @if map-has-key($breaks, $b) {
+    @media only screen and (min-width: #{map-get($breaks, $b)}) {
+      @content;
+    }
+  }
+  @else {
+    @warn "Key #{$b} not defined. Please add a value to the $breaks map.";
+  }
+}
+
+@include mquery(thin) {
+  * { font-size: "32px"; // Demo: remove quotes
+      color: red
+    }
+}
+
+@include mquery(med) {
+  * { font-size: 1em;
+      color: blue
+    }
+}
+
+@include mquery(wide) {
+  * { font-size: 1em;
+      color: green;
+      font-family: courier, fixed
+    }
+}
+
+h1 { color: black }
