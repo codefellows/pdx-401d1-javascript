@@ -2,8 +2,8 @@
 body { font-family: Helvetica, Arial, sans-serif;
        margin: 0 }
 span { white-space:nowrap }
-a       { text-decoration: none;
-          align-items: stretch; }
+a { text-decoration: none;
+    align-items: stretch; }
 a:hover { background-color: #eee }
 
 #mid {
@@ -33,18 +33,21 @@ a:hover { background-color: #eee }
 @media only screen and (max-width: 500px) {
   #mid { flex-direction: column }
   #nav {
+    flex-direction: row;
     align-items: stretch;
     justify-content: space-around;
   }
-  a {
-    display: flex;
-    flex-grow: 1;
-  }
+  a { display: flex;
+      flex-grow: 1;
+    }
 }
 
 @media only screen and (min-width: 500px) {
   #mid { flex-direction: row }
-  #nav { flex-direction: column; }
+  #nav { flex-direction: column;
+         align-items: stretch;
+         justify-content: flex-start;
+       }
   #topItem { margin-top: 0.9em }
 }
 
