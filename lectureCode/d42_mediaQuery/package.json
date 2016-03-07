@@ -1,0 +1,30 @@
+{
+  "name": "jan5_gulp",
+  "version": "1.0.0",
+  "description": "Code 401 assignment",
+  "main": "app.js",
+  "dependencies": {},
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-mocha": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.2.0",
+    "gulp-uglify": "^1.5.3",
+    "jshint": "^2.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "401",
+    "rampup",
+    "training",
+    "lab",
+    "gulp"
+  ],
+  "author": "Al",
+  "license": "ISC"
+}

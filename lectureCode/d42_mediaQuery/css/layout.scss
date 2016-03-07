@@ -6,13 +6,13 @@
     }
 }
 
-@media only screen and (min-width:  800px) {
+@media only screen and (min-width:  700px) {
   * { font-size: 1em;
       color: blue;
     }
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 900px) {
   * { font-size: 1em;
       color: green;
       font-family: courier, fixed
@@ -21,9 +21,9 @@
 */
 
 $breaks: (
-  thin:  320px,
-  med:   800px,
-  wide: 1280px
+  thin: 320px,
+  med:  700px,
+  wide: 980px
 );
 
 /*

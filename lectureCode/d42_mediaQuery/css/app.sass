@@ -1,0 +1,33 @@
+$base_margin: 32px /* This comment survives; the var. declaration vanishes */
+$fontSizeAdjust: 0.7rem
+$textColor: #006000 // This style of comment vanishes. #400030
+
+=grow($baseSize)
+  font-size: $baseSize + $fontSizeAdjust
+
+body
+  font-family: Helvetica, Arial, Sans-Serif
+
+p, custom
+  font-size: 1rem
+
+#secA
+  margin: $base_margin*0.5
+  div
+    font:
+      family: serif
+      weight: bold
+      size: 1rem
+    color: #808
+
+#secB
+  custom
+    color: red
+  div
+    color: $textColor
+
+.note
+  color: #009
+
+#zoo
+  +grow(1rem)
