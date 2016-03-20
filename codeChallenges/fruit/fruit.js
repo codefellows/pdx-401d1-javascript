@@ -15,7 +15,7 @@ function printSoln(indexSet) {
   hist.forEach( (ele, idx) => {
     if (ele > 0) {
       var pluralStr = (ele > 1) ? 's' : ''; // Handle plurals
-      outStr += ele+' '+fruit[idx][name]+pluralStr+', ';
+      outStr += ele + ' ' + fruit[idx][name] + pluralStr + ', ';
     }
   });
   outStr = outStr.slice(0, outStr.length-2); // Cut trailing comma and space
@@ -27,10 +27,9 @@ function pick(idx, left, buyList) { // curr. idx, remaining funds, array idx lis
   if (c > left) return; // Not enough money left
 
   left -= c; // 'Buy' the current fruit
-  buyList.push(idx);
-  if (0 == left)  printSoln(buyList); // Found a solution
+  if (0 == left) { buyList.push(idx);  printSoln(buyList); } // Found a solution
 
-  if (left >  0) // Keep searching (recursive)
+  if (left > 0) // Keep searching (recursive)
     for (var jj=idx; jj < len; jj++) { pick(jj, left, buyList.slice()); }
 }
 
